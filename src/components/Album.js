@@ -12,7 +12,8 @@ class Album extends Component {
     this.state = {
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      hover: false
     };
 
     this.audioElement = document.createElement('audio');
@@ -45,6 +46,18 @@ class Album extends Component {
     }
   }
 
+handleHover(song) {
+  this.target.className = "ion-md-play";
+}
+
+handleHoverOff(song) {
+  this.target.className = "song-number";
+}
+
+playOrPause(song) {
+  this.state.isPlaying ? this.target.className = "ion-md-play" : this.target.className = "ion-md-pause";
+}
+
   render() {
     return (
       <section className="album">
@@ -66,12 +79,16 @@ class Album extends Component {
               {
               this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td id="song-index">{index + 1}</td>
+                <td className="song-index-action"> <button className="index-number"
+                onMouseEnter={() => this.handleHover(song)}
+                onMouseLeave={() => this.handleHoverOff(song)}
+                onClick={() => this.playOrPause()}> {index+1} </button></td>
                 <td id="song-title">{song.title}</td>
                 <td id="song-duration">{song.duration}</td>
                 </tr>
             )
           }
+          <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
           </tbody>
         </table>
       </section>
