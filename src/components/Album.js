@@ -12,8 +12,7 @@ class Album extends Component {
     this.state = {
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false,
-      hover: false
+      isPlaying: false
     };
 
     this.audioElement = document.createElement('audio');
