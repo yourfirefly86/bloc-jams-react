@@ -1,0 +1,20 @@
+
+body {
+  background-color: lightblue;
+  font-family: monospace;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 48px;
+}
+
+.point-title {
+  text-align: justify;
+  font-size: 24px;
+}
+
+.point-description {
+  text-align: justify;
+  font-size: 20px;
+}

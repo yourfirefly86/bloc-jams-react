@@ -1,0 +1,27 @@
+
+.album {
+  padding: 20px;
+}
+
+.album-details {
+  padding: 5px;
+}
+
+#album-cover-art {
+  padding: 20px;
+}
+
+#album-title {
+  font-family: monospace;
+}
+
+.artist {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+table {
+  align-items: center;
+  padding: 5px;
+  font-family: monospace;
+}

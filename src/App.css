@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Image {
+  text-align: center;
+  height: 200px;
+  padding: 20px;
+}
